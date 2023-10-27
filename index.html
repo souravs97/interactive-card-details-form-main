@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="front-card">
+          <div class="logo">
+            <img src="images/card-logo.svg" alt="logo" />
+          </div>
+          <div class="details">
+            <div class="card-num">
+              <p>0000 0000 0000 0000</p>
+            </div>
+            <div class="cvc">
+              <p class="name">Your Name</p>
+              <p><span class="date">00</span>/<span class="date-y">00</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="pin">
+            <p id="showPin">000</p>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <form action="" id="form" class="form">
+          <div class="details-field">
+            <label class="label" for="name">Cardholder Name</label>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              id="name"
+              autocomplete="on"
+              oninput="previewCardName()"
+            />
+            <text class="error-name error"></text>
+          </div>
+          <div class="details-field">
+            <label class="label" for="num">Card Number</label>
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              id="num"
+              inputmode="numeric"
+              oninput="previewCardNum()"
+              maxlength="19"
+            />
+            <text class="error-num error"></text>
+          </div>
+          <div class="details-field-2">
+            <div>
+              <label class="label" for="date">Exp. Date (MM/YY)</label>
+              <div class="expiry">
+                <input
+                  type="number"
+                  placeholder="MM"
+                  id="date"
+                  oninput="previewCardExp()"
+                  inputmode="numeric"
+                  maxlength="2"
+                />
+
+                <input
+                  type="number"
+                  placeholder="YY"
+                  inputmode="numeric"
+                  id="date-y"
+                  oninput="previewCardExp()"
+                  maxlength="2"
+                />
+              </div>
+              <text class="error-exp error"></text>
+            </div>
+            <div class="cv">
+              <label class="label" for="date">CVC</label>
+              <input
+                type="number"
+                id="inputPin"
+                inputmode="numeric"
+                placeholder="e.g. 123"
+                oninput="previewCardPin()"
+                maxlength="3"
+              />
+              <p class="error-pin error"></p>
+            </div>
+          </div>
+
+          <input type="submit" class="submit" value="Confirm" />
+        </form>
+        <div class="success">
+          <div class="success-icon">
+            <img src="images/icon-complete.svg" alt="" />
+          </div>
+          <text class="head">Thank you!</text>
+          <p>We've added your card details</p>
+          <button class="success-button">Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000   MM YY CVC
+    e.g. 123 Confirm -->
+
+    <!-- Completed state start -->
+
+    <!-- Thank you! We've added your card details Continue -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
