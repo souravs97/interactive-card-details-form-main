@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here to visit Challenge Page]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/interactivecarddetailsform-blPLZJvoL1))
-- Live Site URL: [Click here to visit Live site page]([https://your-live-site-url.com](https://souravs97-interative-card.netlify.app/))
+- Solution URL: [Click here to visit Challenge Page]((https://www.frontendmentor.io/solutions/interactivecarddetailsform-blPLZJvoL1))
+- Live Site URL: [Click here to visit Live site page]((https://souravs97-interative-card.netlify.app/))
 
 ## My process
 
